@@ -1,0 +1,19 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-page{
+    border: 3px solid black;
+    width: 100%;
+}
+
+.container-page h2{
+    text-align: center;
+}
