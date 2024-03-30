@@ -5,61 +5,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>RevoU Mini Project</title>
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header>
+        <header class="page-title">
             <h1>Calculator BMI</h1>
         </header>
 
         <main class="main-container">
             <section class="container-page">
-
-                <h2>Form BMI</h2>
-                <p> Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh yang menunjang penampilan, berat badan ideal juga menandakana kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI</p>
-
+                <header>
+                    <p> Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh yang menunjang penampilan, berat badan ideal juga menandakana kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+                </header>
+                
                 <div class="input-form">
-
+                    <h2>Calculate</h2>
                     <div class="form-radio">
-                        <label>Gender</label><br>
-                        <input type="radio" name="male" id="gender"><label for="male"> Male</label>
-    
-                        <input type="radio" name="female" id="gender"><label for="female"> Female</label>
+                        <h3>Gender</h3>
+                        <div class="gender-option">
+                            
+                            <input type="radio" name="gender" id="male" value="Male"> 
+                            <label class="gender-label">Male</label>
+                            
+                            <input type="radio" name="gender" id="female" value="female"> 
+                            <label for="gender">Female</label>
+
+                        </div>
                     </div>
 
                     <div class="form-bio">
-                        <label for="weight"> Weight (kg) </label><br>
-                        <input type="text" name="weight" id="weightVar"><br>
+                        <div class="bio-item">
+                            <label for="weight"> Weight (kg) </label><br>
+                            <input type="number" name="weight" id="weightVar"><br>
+                        </div>
 
-                        <label for="age">Age</label><br>
-                        <input type="text" name="age" id="ageVar"><br>
+                        <div class="bio-item">
+                            <label for="age">Age</label><br>
+                            <input type="number" name="age" id="ageVar"><br>
+                        </div>
 
-                        <label for="height">Height (cm)</label><br>
-                        <input type="text" name="height" id="heightVar"><br>
+                        <div class="bio-item">
+                            <label for="height">Height (cm)</label><br>
+                            <input type="number" name="height" id="heightVar"><br>
+                        </div>
+            
+                    
                     </div>
 
                     <div class="form-button">
-                        <button class="btn calculate" onclick="calculateBMI()"> Calculate BMI</button>
-                        <button class="btn reset" onclick="resetForm()">Reset</button>
+                        <button class="btn-calculate" onclick="calculateBMI()"> Calculate BMI</button>
+                        <button class="btn-reset" onclick="resetForm()">Reset</button>
                     </div>
                 </div>
+                <div class="feature-benefits">
 
-                <h2>Keunggulan Fitur</h2>
-                <ol>
-                    <li>Menghitung berat badan</li>
-                    <li>Menentukan kategori berat badan ideal atau tidak</li>
-                    <li>Mempersiapkan program penurunan berat badan</li>
-                </ol>
-    
-                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalakan pembacaan BMI ini) dan tidak ada tindakan harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter</p>
-    
-                <p>Kalkulator akan memberi Anda gambarang tnetang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda(dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M <sup>2</sup>.</p>
+                    <h2>Keunggulan Fitur</h2>
+                    <ol class="form-orderlist">
+                        <li>1. Menghitung berat badan</li>
+                        <li>2. Menentukan kategori berat badan ideal atau tidak</li>
+                        <li>3. Mempersiapkan program penurunan berat badan</li>
+                    </ol>
+
+                    <br>
+                    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalakan pembacaan BMI ini) dan tidak ada tindakan harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter</p>
+
+                    <br>
+                    <p>Kalkulator akan memberi Anda gambarang tnetang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda(dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M <sup>2</sup>.</p>
+
+                </div>
+
 
             </section>
 
             <section class="container-page">
 
-                <div class="result-page">  
+                <div class="result page">  
                     <h2>Result</h2>
 
                     <h3 id="bmi-verdict">Berat badan lebih</h3>
@@ -70,18 +91,25 @@
 
                 </div>
 
-                <p id="result-between">Hasil BMI diantara 23 dan 25</p>
-                <p id="verdict-note">Anda berada dalam kategori overweight atau berat badan 
-                berlebih</p>
-                <p id=" note-howto">Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga</p>
-                <p id="note-suggestion">Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga normal.</p>
+                <div class="suggestion-panel">
 
-                <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                <button>Registrasi Online Ahli Gizi</button>
+                    <p id="result-between">Hasil BMI diantara 23 dan 25</p>
+
+                    <br>
+                    <p id="verdict-note">Anda berada dalam kategori overweight atau berat badan 
+                    berlebih</p>
+                    <p id=" note-howto">Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga</p>
+                    <p id="note-suggestion">Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga normal.</p>
+                </div>
+
+                <div class="consul-button">
+                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button>Registrasi Online Ahli Gizi</button>
+                </div>
 
                 <p>BMI tidak sepenuhnya memiliki diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda</p>
 
-                <div class="result-risk">
+                <div class="result risk">
                     <h2>Beberapa penyakit yang berasal dari <span id="body-type">kegemukan</span></h2>
                     <ul>
                         <li>Diabetes</li>
@@ -90,8 +118,10 @@
                         <li>Osteoarthritis</li>
                     </ul>
 
-                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button>Registrasi Online Ahli Gizi</button>
+                    <div class="consul-button">
+                        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                        <button>Registrasi Online Ahli Gizi</button>
+                    </div>
                 </div>
 
                 <footer>
