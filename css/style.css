@@ -1,135 +1,285 @@
+/* 
+
+Code Structure:
+
+1. Display Properties
+2. Position
+3. Width, Height
+4. Background Properties
+5. Margin
+6. Padding
+7. Border
+8. Font
+9. Cursor
+10. Other
+
+*/
+
+
 *,*::after,*::before{
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     font-family: 'Ubuntu', sans-serif;
 }
 
+:root{
+    /* Variables */
+    --color-1: #EFF6E0;
+    --color-2: #AEC3B0;
+    --color-3: #598392;
+    --color-4: #124559;
+    --color-5: #01161E;
+
+    --color1-alt: #E9D8A6;
+    --color2-alt: #94D2BD;
+    --color3-alt: #0A9396;
+    --color4-alt: #005F73;
+    --color5-alt: #001219;
+
+    --border-rad-high: 15px;
+    --border-rad-normal: 10px;
+    --border-rad-low: 5px;
+
+}
+
 body{
+
+    background: var(--color-3);
+    background: -moz-linear-gradient(top, var(--color-3) 0%, var(--color-4) 100%);
+    background: -webkit-linear-gradient(top, var(--color-3) 0%, var(--color-4) 100%);
+    background: linear-gradient(to bottom, var(--color-3) 0%, var(--color-4) 100%);
+    color: var(--color1-alt);
+
     font-size: 1.3rem;
 }
 
-h1{
-    text-align: center;
-    margin: 2rem;
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+
+    margin: auto;
+    padding: 15px;
+
+    border-bottom: 3px solid #E9D8A6;
 }
 
 .main-container{
-    width: 80%;
-    margin: auto;
+
     display: flex;
     justify-content: space-evenly;
-    min-height: 100vh;
     gap: 6rem;
+
+    width: 80%;
+    min-height: 100vh;
+    
+    margin: auto;
+
 }
 
 .container-page{
-    /* border: 3px solid black; */
-    width: 100%;
-    padding: 1rem;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    width: 100%;
+    padding: 1rem;
+
     text-align: justify;
+
 }
 
 button{
-    min-height: 50px;
+
     min-width: 125px;
+    min-height: 50px;
+    
+    background-color: var(--color1-alt);
+
     padding: 1rem;
-    border-radius: 5px;
-    font-size: 18px;
+
+    border: none;
+    border-radius: var(--border-rad-low);
+
+    font-size: 16px;
     text-align: center;
+    
+    cursor: pointer;
     
 }
 
+button:hover{
+
+    background-color: var(--color-1);
+
+}
+
+button:active{
+
+    background-color: var(--color-2);
+
+}
+
 .container-page h2{
+
     text-align: center;
 }
 
+.section-header p{
+
+    background-color: var(--color-4);
+
+    padding: 3rem 2rem;
+
+    border-radius: var(--border-rad-normal);
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
+}
+
 .input-form{
-    background-color: gray;
-    padding: 2rem 3rem 2rem 3rem;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     gap: 3rem;
-    justify-content: space-evenly;
-    border-radius: 10px;
+
+    background-color: var(--color-4);
+
+    padding: 2rem 3rem 2rem 3rem;
+
+    border-radius: var(--border-rad-normal);
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
 }
 
 .form-radio{
+
     width: 100%;
 
 }
 
 .gender-option{
+
     padding-top: 15px;
 }
 
 .gender-option input[type="radio"]{
+
+    position: relative;
+    top: -2px;
+
+    width: 20px;
+    height: 20px;
+
+    margin-right: 5px;
+    
+    border: 3px solid var(--color1-alt);
+    border-radius: 50%;
+    
+    cursor: pointer;
+    
+    transition: 0.2s all linear;
+    vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-  
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-  
-    border: 3px solid black;
-    transition: 0.2s all linear;
-    margin-right: 5px;
-
-    vertical-align: middle;
-    
-    cursor: pointer;
-    position: relative;
-    top: -2px;
-    
 
 }
 
 .gender-option input:checked {
-    border: 6px solid black;
-    outline: unset !important /* I added this one for Edge (chromium) support */
+
+    border: 6px solid var(--color1-alt);
+
+    outline: unset !important
+
   }
 
 .form-bio{
-    width: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
-    /* background-color: aqua; */
+
+    width: 100%;
+
 }
 
 
 .bio-item input{
-    font-size: 1.5rem;
-    padding-left: 20px;
-    background-color: transparent;
-    border:none;
-    border-bottom: 3px solid black;
-    height: 50px;
+
     width: 100%;
+    height: 50px;
+
+    background-color: transparent;
+    color: var(--color1-alt);
+
+    padding-left: 20px;
+
+    border:none;
+    border-bottom: 3px solid var(--color1-alt);
+
+    font-size: 1.5rem;
+
     cursor: pointer;
+    -moz-appearance: textfield;
 }
 
 .bio-item input:focus{
+
     border: none;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--color1-alt);
+
     outline: none;
 }
 
-.form-button button{
+.bio-item input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button{
+
+    margin: 0;
+
+    -webkit-appearance: none;
 
 }
 
 .form-button .btn-calculate{
-    background-color: aqua;
 
+    background-color: var(--color3-alt);
+    color: var(--color1-alt);
+
+}
+
+.form-button .btn-calculate:hover{
+
+    background-color: var(--color4-alt);
+
+}
+
+.form-button .btn-calculate:active{
+    background-color: var(--color5-alt);
+}
+
+.feature-benefits{
+
+    background-color: var(--color-4);
+
+    border-radius: var(--border-rad-low);
+
+    padding: 2rem;
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
+    
 }
 
 .form-orderlist li{
@@ -138,28 +288,75 @@ button{
 
 
 .result{
-    border-radius: 10px;
-    height: 350px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: gray;
+
+    background-color: var(--color-4);
 
     padding: 20px;
+
+    border-radius: 10px;
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
+
+}
+
+.suggestion-panel{
+    background-color: var(--color-4);
+
+    padding: 2rem;
+
+    border-radius: var(--border-rad-normal);
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
 }
 
 .result.risk{
+
     height: 400px;
 }
 
 .result.risk ul li{
+
     margin: 15px;
-    list-style: none;
+
     text-align: center;
+
+    list-style: none;
+    
 }
 
 .consul-button{
-    width: 80%;
+
+    width: 90%;
+
     margin: auto;
+
+}
+
+.consul-button button{
+    margin: 0px 1px 0px 1px;
+}
+
+footer{
+    background-color: var(--color-4);
+
+    padding: 2rem;
+
+    border-radius: var(--border-rad-normal);
+
+    text-align: center;
+
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44); 
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.44);
+}
+
+footer img{
+    width: 200px;
+    height: 60px;
 }

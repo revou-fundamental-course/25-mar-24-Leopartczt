@@ -11,14 +11,20 @@
     <body>
         <header class="page-title">
             <h1>Calculator BMI</h1>
+            <p>Created by Meron</p>
         </header>
 
         <main class="main-container">
+            <!-- LEFT SIDE START HERE -->
+
             <section class="container-page">
-                <header>
-                    <p> Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh yang menunjang penampilan, berat badan ideal juga menandakana kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+
+                <header class="section-header">
+                    <p> Ideal body weight is everyone's dream. Not only does having a body that supports your appearance, ideal body weight also indicates a healthy body condition.</p>
                 </header>
                 
+                <!-- FORM INPUT START -->
+
                 <div class="input-form">
                     <h2>Calculate</h2>
                     <div class="form-radio">
@@ -58,83 +64,132 @@
                         <button class="btn-reset" onclick="resetForm()">Reset</button>
                     </div>
                 </div>
+
+                <!-- FORM INPUT END -->
+
+                <!-- BENEFIT START -->
+
                 <div class="feature-benefits">
 
-                    <h2>Keunggulan Fitur</h2>
+                    <h2>Feature Advantages</h2>
+                    <br>
                     <ol class="form-orderlist">
-                        <li>1. Menghitung berat badan</li>
-                        <li>2. Menentukan kategori berat badan ideal atau tidak</li>
-                        <li>3. Mempersiapkan program penurunan berat badan</li>
+                        <li>1. Calculate body weight</li>
+                        <li>2. Determine the ideal weight category or not</li>
+                        <li>3. Prepare a weight loss program</li>
                     </ol>
 
                     <br>
-                    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalakan pembacaan BMI ini) dan tidak ada tindakan harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter</p>
+                    <p>This calculator should only be used by adults (Pregnant or breastfeeding women should not rely on this BMI reading) and no action should be taken based on its value other than consulting a qualified person such as a doctor</p>
 
                     <br>
-                    <p>Kalkulator akan memberi Anda gambarang tnetang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda(dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M <sup>2</sup>.</p>
+                    <p>The calculator will give you an idea of how your weight compares to general values. Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in meters) or BMI = Kg/M<sup>2</sup>.</p>
 
                 </div>
 
+                <!-- BENEFIT END -->
 
             </section>
+            <!-- LEFT SIDE END -->
 
+            <!-- RIGHT SIDE START -->
             <section class="container-page">
+
+                <!-- RESULT PANEL START -->
 
                 <div class="result page">  
                     <h2>Result</h2>
 
-                    <h3 id="bmi-verdict">Berat badan lebih</h3>
+                    <br>
+                    <h3 id="bmi-verdict">Overweight</h3>
+
+                    <br>
                     <h2 id="bmi-result">1</h2>
-                    <p id="bmi-note">Anda memiliki berat badan berlebih</p>
-    
-                    <button class="btn download">Download Hasil BMI</button>
+
+                    <br>
+                    <p id="bmi-note">You are overweight</p>
+                    
+                    <br>
+                    <button class="btn download">Download BMI result</button>
 
                 </div>
+
+                <!-- RESULT PANEL END -->
+
+                <!-- SUGGESTION PANEL START -->
 
                 <div class="suggestion-panel">
 
-                    <p id="result-between">Hasil BMI diantara 23 dan 25</p>
+                    <div>
+                        <p id="result-between">
+                            BMI result between 23 and 25
+                        </p>
+    
+                        <br>
+                        <p id="verdict-note">
+                            You are in the overweight or overweight category
+                            excessive.
+                        </p>
+
+                        <p id=" note-howto">
+                            The best way to lose weight is to regulate the calories of food consumed and exercise.
+                        </p>
+
+                        <p id="note-suggestion">
+                            If your BMI is in this category then you are advised to reduce your weight to normal.
+                        </p>
+                    </div>
 
                     <br>
-                    <p id="verdict-note">Anda berada dalam kategori overweight atau berat badan 
-                    berlebih</p>
-                    <p id=" note-howto">Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga</p>
-                    <p id="note-suggestion">Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga normal.</p>
+                    <div class="consul-button">
+                        <button>Nutritionist Consultation Via Application</button>
+                        <button>Online Registration for Nutritionists</button>
+                    </div>
+                    <br>
+
+                    <p>
+                        BMI does not fully provide a comprehensive diagnosis of a person's body health and risk of disease. You need further consultation regarding your risks and concerns related to your weight.
+                    </p>
+
                 </div>
 
-                <div class="consul-button">
-                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button>Registrasi Online Ahli Gizi</button>
-                </div>
 
-                <p>BMI tidak sepenuhnya memiliki diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda</p>
+                <!-- SUGGGESTION PANEL END -->
+
+                <!-- RISK PANEL START -->
 
                 <div class="result risk">
-                    <h2>Beberapa penyakit yang berasal dari <span id="body-type">kegemukan</span></h2>
+                    <h2>Some diseases stem from <span id="body-type">obesity</span></h2>
+                    <br>
                     <ul>
                         <li>Diabetes</li>
-                        <li>Hipertensi</li>
-                        <li>Sakit Jantung</li>
+                        <li>hypertension</li>
+                        <li>Heart attack</li>
                         <li>Osteoarthritis</li>
                     </ul>
 
                     <div class="consul-button">
-                        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                        <button>Registrasi Online Ahli Gizi</button>
+                        <button>Nutritionist Consultation Via Application</button>
+                        <button>Online Registration for Nutritionists</button>
                     </div>
                 </div>
 
                 <footer>
                     <p>Download Aplikasi</p>
-                    <img src="" alt="GooglePlay logo">
-                    <img src="" alt="App Store logo">
+
+                    <br>
+                    <a href="#"><img src="assets/google-play-logo.png" alt="GooglePlay logo"></a>
+                    <a href=""><img src="assets/app-store-logo.png" alt="App Store logo"></a>
                 </footer>
 
+                <!-- RISK PANEL END -->
+
             </section>
+            
+            <!-- RIGHT SIDE END -->
+
         </main>
 
-
-        
         <script src="js/main.js"></script>
     </body>
 </html>
