@@ -82,3 +82,9 @@ function interpretationBMI(){
         return 'Obesity';
     }
 }
+
+function resetForm(){
+    weightVar.value = '';
+    ageVar.value = '';
+    heightVar.value ='';
+}
