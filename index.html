@@ -43,24 +43,24 @@
                     <div class="form-bio">
                         <div class="bio-item">
                             <label for="weight"> Weight (kg) </label><br>
-                            <input type="number" name="weight" id="weightVar"><br>
+                            <input type="number" name="weight" id="weightVar" required><br>
                         </div>
 
                         <div class="bio-item">
                             <label for="age">Age</label><br>
-                            <input type="number" name="age" id="ageVar"><br>
+                            <input type="number" name="age" id="ageVar" required><br>
                         </div>
 
                         <div class="bio-item">
                             <label for="height">Height (cm)</label><br>
-                            <input type="number" name="height" id="heightVar"><br>
+                            <input type="number" name="height" id="heightVar" required><br>
                         </div>
             
                     
                     </div>
 
                     <div class="form-button">
-                        <button class="btn-calculate" onclick="calculateBMI()"> Calculate BMI</button>
+                        <button class="btn-calculate" onclick="CalculateBMI()"> Calculate BMI</button>
                         <button class="btn-reset" onclick="resetForm()">Reset</button>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                     <h2 id="bmi-result">1</h2>
 
                     <br>
-                    <p id="bmi-note">You are overweight</p>
+                    <p id="bmi-note">You are Overweight</p>
                     
                     <br>
                     <button class="btn download">Download BMI result</button>
@@ -126,24 +126,18 @@
                         </p>
     
                         <br>
-                        <p id="verdict-note">
-                            You are in the overweight or overweight category
-                            excessive.
-                        </p>
-
-                        <p id=" note-howto">
-                            The best way to lose weight is to regulate the calories of food consumed and exercise.
-                        </p>
-
-                        <p id="note-suggestion">
+                        <p id="verdict-suggestion">
+                            You are in the overweight category excessive. <br>
+                            The best way to lose weight is to regulate the calories of food consumed and exercise. <br>
                             If your BMI is in this category then you are advised to reduce your weight to normal.
                         </p>
+                        
                     </div>
 
                     <br>
                     <div class="consul-button">
-                        <button>Nutritionist Consultation Via Application</button>
-                        <button>Online Registration for Nutritionists</button>
+                        <button>Consultation Via Application</button>
+                        <button>Online Registration</button>
                     </div>
                     <br>
 
@@ -169,8 +163,8 @@
                     </ul>
 
                     <div class="consul-button">
-                        <button>Nutritionist Consultation Via Application</button>
-                        <button>Online Registration for Nutritionists</button>
+                        <button>Consultation Via Application</button>
+                        <button>Online Registration</button>
                     </div>
                 </div>
 
